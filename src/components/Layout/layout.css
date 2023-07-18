@@ -1,0 +1,84 @@
+@import url(../../index.css);
+.layout{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    
+  }
+
+.layout--container{
+    z-index: 1;
+    grid: column start 1; ;
+    grid-column-end: 3 ;
+    grid-row-start: 2 ;
+    grid-row-end:3 ; 
+    background-color: #ffffff;
+    box-shadow:  0px 0px 5px 0 rgb(192, 191, 191) ;
+    border-radius: 3px;
+    width: 20rem;
+    height: auto;
+}
+
+.layout--margin{
+  margin-top:-10rem ;
+}
+
+.layout--container--center{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+  } 
+
+  /* .layout--container--center button :first-child{
+    border-radius: 20%;
+  } */
+
+ #btn-one{
+    border-radius: 5px  0 0 5px;
+    padding-left: 20px;
+ }
+   
+ #btn-two{
+    border-radius: 0 5px 5px 0;
+    padding-right: 20px;
+ }
+
+  .layout--img1{
+    grid-column-start:1;
+    grid-column-end:4;
+    grid-row-start:1 ;
+    grid-row-end:4 ; 
+    object-fit: cover;
+    background-image: url('../../assets/images/Vector_4.svg');
+    background-repeat: no-repeat;
+  }
+
+  
+.layout--img2{
+    grid-column-start:2;
+    grid-column-end:4 ;
+    grid-row-start: 1 ;
+    grid-row-end:11 ; 
+    object-fit: cover;
+    background-image: url('../../assets/images/Vector_3.svg');
+    background-repeat: no-repeat; 
+}
+
+.layout--btn--green{
+    margin: 10px 0;
+    background-color: var(--green);
+    border: none;
+    color: black;
+    padding: 5px;
+    /* border-radius: 3px; */
+  }
+  
+  .layout--btn--gray{
+    margin: 10px 0;
+    background-color: #D3D3D3;
+      border: none;
+      color: white;
+      padding: 5px;
+      /*  border-radius: 3px*/
+  }
+

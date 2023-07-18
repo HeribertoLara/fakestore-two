@@ -1,0 +1,39 @@
+.form--body{
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+  } 
+.form--body > div{
+    margin-left: -1rem;
+    width: 65%;
+}
+.form--title{
+    text-align: center;
+    font-size: 25px;
+  }
+
+/* .form--alert{
+
+}
+
+.form--alert--danger{
+
+} */
+.form--button{
+    width: 70%;
+    background-color:var(--green);
+    border: var(--green);
+    padding: .5rem ;
+    border-radius: 3px;
+    color: var(--white); 
+  }
+
+  .form--input{
+    background-color: var(--stroke-cards);
+    border-color: var(--gray);
+    border: 1px;
+    border-radius: 3px;
+    height: 1.5rem;
+    padding: .3rem .3rem;
+    width: 100%;
+  }

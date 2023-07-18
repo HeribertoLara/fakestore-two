@@ -1,0 +1,70 @@
+.card--product{
+    width: 15rem;
+    height: 20rem;
+    border: solid 1px var(--gray);
+    margin:2rem;
+    box-shadow: var(--gray) 3px 3px 3px;
+    border-radius: 5px;
+}
+
+.card--image{
+    width: 7rem;
+    border-radius: 5px 5px 0 0;
+}
+.card--img--link{
+    display: grid;
+    place-items: center;
+    height: 12rem;
+}
+
+.card--image:hover{
+    cursor: pointer;
+    opacity: 20%;
+}
+
+.card--title{
+    width: 100%;
+}
+
+.card--section{
+    margin: 10px;
+    display: block;
+}
+
+.card--price{
+    font-size: x-large;
+    font-weight: 600;
+    color:rebeccapurple;
+    display:grid;
+    place-items: center;
+}
+
+.card--rating{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+.card--button{
+    display: grid;
+    padding: .2rem;
+    border-radius: 50%;
+    place-items: center;
+    background: none;
+    border: none;
+    width:2rem;
+}
+
+.card--button:hover{
+    background-color: var(--gray);
+    
+}
+.card--button--icon{
+    height: 1.5rem;
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 390px){
+    .card-product{
+        margin: 0;
+    }
+}

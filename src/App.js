@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+/* import {PanelTasks} from './components/PanelTasks/PanelTasks'*/
+import {Layaout} from './components/Layout/Layaout' 
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { PanelProducts } from './components/panelProducts/PanelProducts';
+import { DataProvider } from './context/Context';
+import { SingleProduct } from './components/SingleProduct/SingleProduct';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+    <DataProvider>
+
+      <BrowserRouter>
+        <Routes> 
+          <Route path="/"  exact element={<PanelProducts/>} />
+          <Route path="/products/:id"   element={<SingleProduct/>} />
+          {/*   <Route path="/panel-tasks/:token" element={<PanelTasks/>}/>  */}
+          <Route path="/login" element={<Layaout />} />    
+          <Route path="*" element={<p>Not Found</p>} />    
+          {/* <Route path="/chat-bot" element={<PanelChat />} />     */}
+       </Routes> 
+      </BrowserRouter>   
+    </DataProvider>
+  </>
   );
 }
 
