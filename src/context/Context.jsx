@@ -32,6 +32,7 @@ export const  DataProvider= ({children}) => {
     items = searchedProducts
   }
     
+  useEffect(()=>{
     const getProducts = async () => {
         try {
           const res = await axios.get(
@@ -39,14 +40,13 @@ export const  DataProvider= ({children}) => {
             
           );
         setProducts(res.data)
-        console.log(products)
+        //console.log(products)
         return res;
         } catch (error) {
           alert(error); 
         }
       };
     
-      useEffect(()=>{
         getProducts()
       },[])
       
